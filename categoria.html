@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <title>Projetos Digitais</title>
+  <link href="assets/css/reset.css" rel="stylesheet">
+  <script src="assets/js/codes.js"></script>
+  <script src="assets/js/script.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Hepta+Slab|Righteous&display=swap" rel="stylesheet">
+  <link href="assets/css/style_categoria.css" rel="stylesheet">
+  <link href="assets/css/style_compartilhado.css" rel="stylesheet">
+
+  <meta charset="utf-8"/>
+</head>
+<body class="cor_fundo">
+  <header class="header">
+    <div class="img_header">
+      <a href="index.html">
+        <img class="logo" src= "https://picsum.photos/100/100/?random" alt="logo">
+      </a>
+    </div>
+    <ul class="menu_title">Portfolio de projetos de Luigi Dicnotas
+      <ul class="nav">
+        <li class="nav-item"><a class="link" href="categoria.html">MatSim</a></li>
+        <li class="nav-item"><a class="link" href="categoria.html">Digitais</a></li>
+        <li class="nav-item"><a class="link" href="categoria.html">Fablab</a></li>
+        <li class="nav-item"><a class="link" href="categoria.html">Elétrica</a></li>
+      </ul>
+    </ul>
+
+    <ul class="nav1">
+      <li class="nav-item1"><a class="link" href="categoria.html">MatSim</a></li>
+      <li class="nav-item1"><a class="link" href="categoria.html">Digitais</a></li>
+      <li class="nav-item1"><a class="link" href="categoria.html">Fablab</a></li>
+      <li class="nav-item1"><a class="link" href="categoria.html">Elétrica</a></li>
+    </ul>
+  </header>
+
+  <main class="main">
+    <h1 class="titles"> 
+      Projetos Digitais
+    </h1>
+    <div class="img_place">
+      <img class="trab_big_image" src="assets/img/digital2.jpeg" alt="mundo digital">
+    </div>
+    <p class="legenda_trab">
+      Nesta página estão disponíveis os projetos digitais realizados durante o curso.
+    </p>
+
+
+    <ul class="section_menu">
+      {{#each portfolio}}
+      <li class="section_menu_item">
+        <img class="section_menu_image" src="assets/img/mat.png" alt="MatSim">
+        <p class="section_menu_title">
+          <a class="link_title" href="projeto.html">{{@key}}</a>
+        </p>
+        <p class="section_menu_text">
+          {{this.descricao}}
+        </p>
+      </li>
+      {{/each}}
+      </ul>
+  </main>
