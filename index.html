@@ -20,19 +20,18 @@
       </a>
     </figure>
     <ul class="menu_title">Portfolio de projetos de Luigi Dicnotas
+
       <ul class="nav">
-            <li class="nav-item"><a class="link" href="categoria.html">MatSim</a></li>
-            <li class="nav-item"><a class="link" href="categoria.html">Digitais</a></li>
-            <li class="nav-item"><a class="link" href="categoria.html">Fablab</a></li>
-            <li class="nav-item"><a class="link" href="categoria.html">Elétrica</a></li>
+        {{#each portfolio}}
+            <li class="nav-item"><a class="link" href="categoria.html?key=key">{{this.categoria}}</a></li>
+          {{/each}}  
       </ul>
     </ul>
 
     <ul class="nav1">
-            <li class="nav-item1"><a class="link" href="categoria.html">MatSim</a></li>
-            <li class="nav-item1"><a class="link" href="categoria.html">Digitais</a></li>
-            <li class="nav-item1"><a class="link" href="categoria.html">Fablab</a></li>
-            <li class="nav-item1"><a class="link" href="categoria.html">Elétrica</a></li>
+            {{#each portfolio}}
+            <li class="nav-item"><a class="link" href="categoria.html?key={{@key}}">{{this.categoria}}</a></li>
+          {{/each}}
       </ul>
 
   </header>
@@ -44,9 +43,11 @@
     <ul class="section_menu">
       {{#each portfolio}}
       <li class="section_menu_item">
-        <img class="section_menu_image" src="assets/img/mat.png" alt="MatSim">
+        <figure>
+        <img class="section_menu_image" src="assets/img/{{@key}}.png" alt="{{@key}}">
+        </figure>
         <p class="section_menu_title">
-          <a class="link_title" href="categoria.html">{{@key}}</a>
+          <a class="link_title" href="categoria.html?key={{@key}}">{{this.categoria}}</a>
         </p>
         <p class="section_menu_text">
           {{this.descricao}}

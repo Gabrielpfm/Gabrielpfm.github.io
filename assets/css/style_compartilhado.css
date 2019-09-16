@@ -186,7 +186,7 @@
         display: none;
     }
 
-    .menu_title:click .nav {
+    .menu_title:hover .nav {
 
        display: block;
 

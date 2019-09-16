@@ -7,7 +7,7 @@
   <link href="assets/css/style_projeto.css" rel="stylesheet">
   <link href="assets/css/style_compartilhado.css" rel="stylesheet">
   <script src="assets/js/codes.js"></script>
-  <script src="assets/js/script.js"></script>
+  <script src="assets/js/projeto.js"></script>
   <meta charset="utf-8"/>
   <title>Ep final de DeSoft</title>
   
@@ -21,19 +21,18 @@
   </div>
   <ul class="menu_title">Portfolio de projetos de Luigi Dicnotas
     <ul class="nav">
-      <li class="nav-item"><a class="link" href="categoria.html">MatSim</a></li>
-      <li class="nav-item"><a class="link" href="categoria.html">Digitais</a></li>
-      <li class="nav-item"><a class="link" href="categoria.html">Fablab</a></li>
-      <li class="nav-item"><a class="link" href="categoria.html">Elétrica</a></li>
+        {{#each portfolio}}
+            <li class="nav-item"><a class="link" href="categoria.html?key={{@key}}">{{this.categoria}}</a></li>
+          {{/each}}  
+      </ul>
     </ul>
-  </ul>
 
-  <ul class="nav1">
-    <li class="nav-item1"><a class="link" href="categoria.html">MatSim</a></li>
-    <li class="nav-item1"><a class="link" href="categoria.html">Digitais</a></li>
-    <li class="nav-item1"><a class="link" href="categoria.html">Fablab</a></li>
-    <li class="nav-item1"><a class="link" href="categoria.html">Elétrica</a></li>
-  </ul>
+    <ul class="nav1">
+            {{#each portfolio}}
+            <li class="nav-item"><a class="link" href="categoria.html?key={{@key}}">{{this.categoria}}</a></li>
+          {{/each}}
+      </ul>
+
 </header>
 
 <h1 class="titles">Ep final de DeSoft</h1>
