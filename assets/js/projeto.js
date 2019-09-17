@@ -18,9 +18,13 @@ document.addEventListener('DOMContentLoaded', function() {
     */
     coDesReplace('.nav',data)
     coDesReplace('.nav1',data)
-
-    context = data['portfolio'][value][value2]
+    
+    context = data['portfolio'][value2]['projetos'][value]
+    
+    coDesReplace('.titles', context)
+    coDesReplace('.img_position',value)
     coDesReplace('.section_menu', context)
+
 
 
   })

@@ -35,21 +35,20 @@
 
 </header>
 
-<h1 class="titles">Ep final de DeSoft</h1>
+<h1 class="titles">{{this.itens.titulo}}</h1>
 
 <main class="main">
   <figure class="img_position">
-    <img class="projeto_img" src="assets/img/inicio2.jpg" alt="Python Party">
+    <img class="projeto_img" src="assets/img/{{this}}.png" alt="{{this}}">
   </figure>
   <ul class="section_menu">
-      {{#each portfolio}}
+      {{#each itens}}
       <li class="section_menu_item">
-        <img class="section_menu_image" src="assets/img/mat.png" alt="MatSim">
         <p class="section_menu_title">
           <h2 class="titulo" >{{@key}}</h2>
         </p>
         <p class="section_menu_text">
-          {{this.descricao}}
+          {{this}}
         </p>
       </li>
       {{/each}}

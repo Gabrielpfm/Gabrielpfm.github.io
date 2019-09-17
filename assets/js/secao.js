@@ -1,6 +1,9 @@
 document.addEventListener('DOMContentLoaded', function() {
   let params = coDesExtract()
   let value = params['key']
+  let strlink = "projeto.html?key2="+value+"&key={{@key}}"
+  let link = document.querySelector(".link_title")
+  link.href = strlink
 
   let db = coDesConnect('https://dicnotas.firebaseio.com/')
 
@@ -15,10 +18,14 @@ document.addEventListener('DOMContentLoaded', function() {
       É sério. Se fizer isso, você realmente
       vai se arrepender. Você foi avisado.
     */
+    context = data['portfolio'][value]
     coDesReplace('.nav',data)
     coDesReplace('.nav1',data)
+    coDesReplace('.img_place',context)
+    coDesReplace('.titles',context)
+    coDesReplace('.legenda_trab',context)
 
-    context = data['portfolio'][value]
+    
     coDesReplace('.section_menu', context)
 
 
