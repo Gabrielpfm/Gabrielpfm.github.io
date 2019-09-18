@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  
+
   <link href="https://fonts.googleapis.com/css?family=Hepta+Slab|Righteous&display=swap" rel="stylesheet">
   <link href="assets/css/reset.css" rel="stylesheet">
   <link href="assets/css/style_projeto.css" rel="stylesheet">
@@ -16,43 +16,43 @@
  <header class="header">
   <div class="img_header">
     <a href="index.html">
-      <img class="logo" src= "https://picsum.photos/100/100/?random" alt="logo">
+      <img class="logo" src= "assets/img/Logo.png" alt="logo">
     </a>
   </div>
   <ul class="menu_title">Portfolio de projetos de Luigi Dicnotas
     <ul class="nav">
-        {{#each portfolio}}
-            <li class="nav-item"><a class="link" href="categoria.html?key={{@key}}">{{this.categoria}}</a></li>
-          {{/each}}  
-      </ul>
+      {{#each portfolio}}
+      <li class="nav-item"><a class="link" href="categoria.html?key={{@key}}">{{this.categoria}}</a></li>
+      {{/each}}  
     </ul>
+  </ul>
 
-    <ul class="nav1">
-            {{#each portfolio}}
-            <li class="nav-item"><a class="link" href="categoria.html?key={{@key}}">{{this.categoria}}</a></li>
-          {{/each}}
-      </ul>
+  <ul class="nav1">
+    {{#each portfolio}}
+    <li class="nav-item"><a class="link" href="categoria.html?key={{@key}}">{{this.categoria}}</a></li>
+    {{/each}}
+  </ul>
 
 </header>
 
-<h1 class="titles">{{this.itens.titulo}}</h1>
+<h1 class="titles">{{this.itens.Título}}</h1>
 
 <main class="main">
   <figure class="img_position">
     <img class="projeto_img" src="assets/img/{{this}}.png" alt="{{this}}">
   </figure>
   <ul class="section_menu">
-      {{#each itens}}
-      <li class="section_menu_item">
-        <p class="section_menu_title">
-          <h2 class="titulo" >{{@key}}</h2>
-        </p>
-        <p class="section_menu_text">
-          {{this}}
-        </p>
-      </li>
-      {{/each}}
-      </ul>
+    {{#each itens}}
+    <li class="section_menu_item">
+      <p class="section_menu_title">
+        <h2 class="titulo" >{{@key}}</h2>
+      </p>
+      <p class="section_menu_text">
+        {{this}}
+      </p>
+    </li>
+    {{/each}}
+  </ul>
 </main>
 </body> 
 </html>
