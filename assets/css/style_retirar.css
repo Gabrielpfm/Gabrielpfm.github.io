@@ -1,0 +1,44 @@
+@media (max-width: 68rem){
+	.section_menu{
+		display: flex;
+		flex-direction: column;
+
+		justify-content: space-between;
+		height: 40rem;
+
+	}
+	.categoria{		
+		font-size: 4rem;
+		border-style: solid;
+		border-width: 0.25rem; 
+		text-align: center;
+		flex-grow: 2;
+		color: #ffffff;
+	}
+
+	.box{
+		display: flex;
+		justify-content: space-evenly;
+		
+		align-items: stretch;
+		text-decoration: none;
+
+	}
+	
+
+	.box:visited{
+		color: #ffffff;
+	}
+
+	.titles{
+		font-family: 'Arvo', serif;
+		color: #ffffff;
+		font-size: 8rem;
+		display: flex;
+		justify-content: center;
+		margin-top: 2.5rem;
+		margin-bottom: 2.5rem;
+		text-align: center;
+
+	}
+}
