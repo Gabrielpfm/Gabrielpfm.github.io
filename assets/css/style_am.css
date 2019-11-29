@@ -20,13 +20,15 @@
 		border-radius: 8rem;
 		font-family: 'Work Sans', sans-serif;
 		text-align: center;
-		width: 75%
+		width: 75%;
+		background-color:#000000;
 
 	}
 	.principal{
 		font-size: 5rem;
 		display:flex;
 		justify-content: space-around;
+
 	}
 	.item_menu{
 		font-size: 4rem;
@@ -51,6 +53,7 @@
 	.insert{
 		font-family: 'Work Sans', sans-serif;
 		text-align:center;
+		margin-top: 1rem;
 	
 		width: 50%;
 		height: 100%;
@@ -82,6 +85,7 @@
 
 
 	}
+
 
 	input{
 		width: 100%;
